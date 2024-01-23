@@ -1,0 +1,17 @@
+.Button{
+  display: flex;
+}
+
+.btn{
+  font-size: 18px;
+  color: #fff;
+  background-color: #ED1C24;
+  padding: 10px 40px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.btn:hover{
+  background-color: #fff;
+  color: #000;
+}
