@@ -6,6 +6,7 @@ import ButtonBorder from './components/buttonBorder/buttonBorder';
 import NewModels from './components/newModels/newModels';
 import Benefit from './components/benefit/benefit';
 import Discover from './components/discover/discover';
+import Footer from './components/footer/footer';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
     <NewModels></NewModels>
     <Benefit></Benefit>
     <Discover></Discover>
+    <Footer></Footer>
     </>
   )
 }
