@@ -33,6 +33,7 @@
   font-weight: 300;
   padding-left: 1rem;
   padding-right: 1rem;
+  color: #a9afbb;
   background-color: #282828;
   border: none;
   border-radius: 10px;
@@ -69,11 +70,13 @@
   background-color: #fff;
   color: #ed1c24;
   transform: scale(1.05);
+  cursor: pointer;
 }
+
 
 .copyWrapper{
   border-top: 2px solid #fff;
-  padding:16px 0;
+  padding: 16px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
