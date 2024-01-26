@@ -35,6 +35,12 @@
   display: flex;
   flex-direction: column;
 }
+
+.discoverContainer img:hover{
+  transition: .5s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transform:scale(1.06);
+}
+
 .cardsDisc1 {
   width: 300px;
 }
