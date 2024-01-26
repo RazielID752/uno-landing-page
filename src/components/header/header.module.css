@@ -15,9 +15,15 @@
   display: flex;
   gap: 32px;
 }
-
+.ul_wrapper .linksMenuLi:hover{
+  color: #ed1c24;
+}
 .nav_li a {
   color: #fff;
+}
+
+.nav_li .btn_singIn:hover{
+  color: #ed1c24;
 }
 
 .LogoButton {

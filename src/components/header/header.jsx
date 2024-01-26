@@ -40,7 +40,7 @@ const Header = () => {
           <ul id={styles.ulmenu} className={styles.ul_wrapper}>
             {links.map((link, index) => (
               <li className={styles.nav_li} key={link.name}>
-                <a href={link.link} key={index}>
+                <a className={styles.linksMenuLi} href={link.link} key={index}>
                   {link.name}
                 </a>
               </li>

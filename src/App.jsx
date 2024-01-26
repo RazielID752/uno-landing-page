@@ -1,28 +1,17 @@
-import './App.css'
-import Header from './components/header/header';
-import Hero from './components/hero/hero';
-import Button from './components/button-1/button';
-import ButtonBorder from './components/buttonBorder/buttonBorder';
-import NewModels from './components/newModels/newModels';
-import Benefit from './components/benefit/benefit';
-import Discover from './components/discover/discover';
-import Footer from './components/footer/footer';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Home from "./pages/home";
+import Produtos from "./pages/produtos";
 
 function App() {
-
   return (
-    <>
-    <Header/>
-    <Hero>
-      <Button></Button>
-      <ButtonBorder></ButtonBorder>
-    </Hero>
-    <NewModels></NewModels>
-    <Benefit></Benefit>
-    <Discover></Discover>
-    <Footer></Footer>
-    </>
-  )
+    <Router>
+      <Routes>
+       <Route path="/" Component={Home} />
+       <Route path="/produtos" Component={Produtos} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App;

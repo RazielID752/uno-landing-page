@@ -38,10 +38,10 @@ const NewModels = () => {
       <div className={styles.cardNewWrapper}>
         {/* ... map para adicionar dinamicamente*/}
         {[
-          { img: card1, title: 'UNO® minimalista', price: 'R$ 80,00' },
-          { img: card2, title: 'UNO® Flip SIOC', price: 'R$ 104,99' },
-          { img: card3, title: 'UNO® Original', price: 'R$ 29,90' },
-          { img: card4, title: 'UNO® Dos', price: 'R$ 50,00' },
+          { img: card1, links:'/produtos', title: 'UNO® minimalista', price: 'R$ 80,00' },
+          { img: card2, links:'/produtos', title: 'UNO® Flip SIOC', price: 'R$ 104,99' },
+          { img: card3, links:'/produtos', title: 'UNO® Original', price: 'R$ 29,90' },
+          { img: card4, links:'/produtos', title: 'UNO® Dos', price: 'R$ 50,00' },
         ].map((card, index) => (
           <div key={index}>
             <div className={styles.cardNewContainer}>
@@ -53,7 +53,7 @@ const NewModels = () => {
               <div className={styles.cardFooter}>
                 <h4>Acaba em : <span className={styles.cardBodySpan}>{formatTime(remainingSeconds)}</span></h4>
                 <div>
-                  <a href="#" className={styles.cardBodyBtn}>Comprar</a>
+                  <a href={card.links} className={styles.cardBodyBtn}>Comprar</a>
                 </div>
               </div>
             </div>
