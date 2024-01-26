@@ -15,3 +15,16 @@
   background-color: #fff;
   color: #000;
 }
+
+@media(max-width:600px){
+  .btn{
+    padding: 0.625rem 0.875rem;
+    font-size: 1rem;
+  }
+}
+@media(max-width:320px){
+  .btn{
+    padding: 0.825rem 0.875rem;
+    font-size: 0.875rem;
+  }
+}

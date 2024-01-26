@@ -6,6 +6,7 @@
 
 .benefitWrapper h2 {
   text-align: center;
+  font-weight: 500;
   font-size: 40px;
   color: #fff;
   padding-bottom: 16px;
@@ -14,7 +15,7 @@
   text-align: center;
   font-size: 24px;
   color: #fff;
-  font-weight: 300;
+  font-weight: 200;
 }
 .boxIconWrapper span {
   display: block;
@@ -63,4 +64,28 @@
   margin-right: 80px;
   filter: blur(70px);
   z-index: -1;
+}
+
+
+@media (max-width: 600px) {
+  .benefitIconWrapper{
+    gap: 32px;
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefitWrapper h2{
+    font-size: 1.5rem;
+  }
+  .benefitWrapper p{
+    font-size: 1rem;
+    padding: 0 1rem;
+    max-width: 40ch;
+    margin: 0 auto;
+  }
+  .benefitIconWrapper::before{
+    width: 40vh;
+    height: 190vh;
+    max-width: 100%;
+    max-height: 62rem;
+  }
 }

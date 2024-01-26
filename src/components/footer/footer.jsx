@@ -11,7 +11,7 @@ const Footer = () => {
       <div className={styles.footerWrapper}>
         <div className={styles.footerContainer}>
           <div>
-            <img src={Logo} alt="" />
+            <img className={styles.FooterLogo} src={Logo} alt="" />
             <span className={styles.FooterP}>
               Esta edição especial do UNO®, o jogo de cartas adorado por todos,
               tem um visual totalmente exclusivo. Concebida com uma estética

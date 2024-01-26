@@ -1,8 +1,8 @@
-.buttonBorder{
+.buttonBorder {
   display: flex;
 }
 
-.btnBorder{
+.btnBorder {
   font-size: 18px;
   color: #fff;
   border: 2px solid #fff;
@@ -11,7 +11,26 @@
   font-weight: 500;
 }
 
-.btnBorder:hover{
+.btnBorder:hover {
   background-color: #fff;
   color: #000;
+}
+
+@media (max-width: 600px) {
+  .buttonBorder{
+    align-items: center;
+    justify-content: center;
+  }
+
+  .btnBorder {
+    font-size: 1rem;
+    padding: 0.625rem 0.875rem;
+  }
+}
+
+@media(max-width:320px){
+  .btnBorder {
+    padding: 0.825rem 0.875rem;
+    font-size: 0.875rem;
+  }
 }

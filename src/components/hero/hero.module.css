@@ -10,12 +10,12 @@
 .heroH2 {
   font-size: 50px;
   color: #fff;
-  font-weight: 400;
+  font-weight: 300;
   max-width: 20ch;
 }
 
 .heroSpan {
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .heroP {
@@ -60,4 +60,37 @@
   background: #2f80ed;
   filter: blur(70px);
   z-index: -2;
+}
+
+@media(max-width:600px){
+  .hero_wrapper{
+    padding-top: 1rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .heroH2{
+    padding: 0 1rem;
+    text-align: center;
+    font-size: 30px;
+    max-width: 100%;
+  }
+  .heroP{
+    padding: 1rem 1rem;
+    font-size: 1rem;
+    max-width: 100%;
+    text-align: center;
+  }
+  .flexBtn{
+    padding: 0 1rem;
+    gap: 20px;
+    justify-content: center;
+  }
+  .caixaWrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 4rem;
+  }
+  .caixaWrapper img{
+    width: 80%;
+  }
 }

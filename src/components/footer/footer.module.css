@@ -73,8 +73,7 @@
   cursor: pointer;
 }
 
-
-.copyWrapper{
+.copyWrapper {
   border-top: 2px solid #fff;
   padding: 16px 0;
   display: flex;
@@ -82,12 +81,38 @@
   align-items: center;
 }
 
-.ulCopyRede{
+.ulCopyRede {
   display: flex;
   gap: 8px;
 }
-.copyWrapper div p{
+.copyWrapper div p {
   color: #828282;
   font-weight: 300;
   font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .footerWrapper{
+    border-top: 2px solid #fff;
+  }
+
+  .footerContainer div .FooterLogo {
+    margin: 0 auto;
+  }
+  .footerContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+  .FooterP {
+    text-align: center;
+  }
+  .FooterSpan {
+    padding-top: 1rem;
+    text-align: center;
+    max-width: 40ch;
+  }
+  .copyWrapper{
+    flex-direction: column;
+    padding: 1rem 1rem;
+  }
 }

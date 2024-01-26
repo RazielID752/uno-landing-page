@@ -1,5 +1,6 @@
 import styles from "./discover.module.css";
 import card1 from "../../assets/img/uno-minimalista.png";
+import Button from '../button-1/button';
 import ButtonBorder from "../buttonBorder/buttonBorder";
 import card2 from "../../assets/img/uno-flip.png";
 import card3 from "../../assets/img/uno-original.png";
@@ -13,7 +14,7 @@ const Discover = () => {
       <div className={styles.discoverWrapper}>
         <h2>Nossos novos modelos</h2>
         <div className={styles.btnDiscover}>
-          <a href="#">Filtrar</a>
+          <Button>Filtrar</Button>
         </div>
       </div>
       <div className={styles.cardDiscoverWrapper}>
