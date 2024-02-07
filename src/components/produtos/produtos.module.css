@@ -1,3 +1,11 @@
+.loadText .spanLoad{
+  margin: 0 auto;
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+}
 .produtoWrapper {
   padding: 64px 16px;
   display: flex;
@@ -133,10 +141,16 @@
 @media (max-width: 600px) {
   .produtoWrapper {
     flex-direction: column;
+    gap: 2rem;
   }
   .containerWrapper {
     flex-direction: column-reverse;
   }
+
+  .FinalWrapper{
+    margin: 1rem;
+  }
+  
   .FinalWrapper h3 {
     max-width: 36ch;
   }

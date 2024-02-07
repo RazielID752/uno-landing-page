@@ -2,7 +2,7 @@ import Header from "../components/header/header";
 import Footer from "../components/footer/footer";
 import ProdutoCpn from "../components/produtos/produto";
 
-const Produtos = () => {
+const Minimalista = () => {
   return (
     <>
       <Header></Header>
@@ -12,4 +12,4 @@ const Produtos = () => {
   );
 };
 
-export default Produtos;
+export default Minimalista;

@@ -1,3 +1,11 @@
+.loadText .spanLoad{
+  margin: 0 auto;
+  display: flex;
+  padding-top: 50px;
+  justify-content: center;
+  color: #fff;
+  font-size: 30px;
+}
 .cardNewWrapper{
   display: flex;
   max-width: 1280px;
@@ -7,7 +15,7 @@
 }
 
 .newModelsWrapper{
-  padding-top:64px ;
+  padding-top:64px;
   margin: 0 auto;
   display: flex;
   justify-content: space-between;

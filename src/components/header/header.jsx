@@ -10,7 +10,7 @@ const Header = () => {
   const links = [
     { name: "Inicio", link: "/" },
     { name: "Onde encontrar", link: "/" },
-    { name: "Novos Produtos", link: "/" },
+    { name: "Novos Produtos", link: "#new-produtos" },
     { name: "Creditos", link: "/" },
   ];
 

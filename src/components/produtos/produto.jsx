@@ -2,8 +2,55 @@ import styles from "./produtos.module.css";
 import CaixaMini from "../../assets/img/uno-minimalista.png";
 import MasterCard from "../../assets/img/Mastercard.svg";
 import Button from "../button-1/button";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const ProdutoCpn = () => {
+  const [remainingSeconds, setRemainingSeconds] = useState(1 * 3600); // Inicialmente, 1 hora em segundos
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setRemainingSeconds((prevSeconds) =>
+        prevSeconds > 0 ? prevSeconds - 1 : 1 * 3600
+      );
+    }, 1000); // Atualiza a cada 1 segundo (1000 milissegundos)
+
+    return () => clearInterval(interval);
+  }, []);
+
+  // Função para formatar o tempo restante em HH:mm:ss
+  const formatTime = (seconds) => {
+    const pad = (num) => num.toString().padStart(2, "0");
+    const hh = pad(Math.floor(seconds / 3600));
+    const mm = pad(Math.floor((seconds % 3600) / 60));
+    const ss = pad(seconds % 60);
+    return `${hh}:${mm}:${ss}`;
+  };
+
+  const [dados, setDados] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(
+          "https://uno-8zde.onrender.com/produtos"
+        );
+        console.log(response.data.produtos[0]);
+        setDados(response.data.produtos[0]);
+      } catch (error) {
+        console.error("Erro ao buscar dados da API:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+  if (!dados) {
+    return (
+      <div className={styles.loadText}>
+        <span className={styles.spanLoad}>Carregando dados...</span>
+      </div>
+    );
+  }
+
   return (
     <section className={styles.ProdutoCpn}>
       <div className={styles.produtoWrapper}>
@@ -12,13 +59,13 @@ const ProdutoCpn = () => {
             <img src={CaixaMini} alt="" />
           </div>
           <div>
-            <h2>Jogo De Cartas UNO® minimalista Preto - mattel</h2>
+            <h2>{dados.name}</h2>
             <div className={styles.wrapperVlTime}>
               <div className={styles.wrapperValor}>
                 <h3>R$ 80,00</h3>
               </div>
               <div className={styles.timeVlcontainer}>
-                <span>Acaba em 01.34.45</span>
+                <span>Acaba em {formatTime(remainingSeconds)}</span>
               </div>
             </div>
             <div className={styles.wrraperAbout}>
@@ -38,9 +85,10 @@ const ProdutoCpn = () => {
             </div>
           </div>
         </div>
+
         <div className={styles.FinalWrapper}>
           <div className={styles.FinalContainerC}>
-            <h2>R$ 80,00</h2>
+            <h2>{dados.preco}</h2>
             <h3>
               Entrega GRÁTIS:
               <span> Segunda-feira, 29 de Janeiro. </span>
@@ -65,6 +113,7 @@ const ProdutoCpn = () => {
           </div>
         </div>
       </div>
+      ;
     </section>
   );
 };
